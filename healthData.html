@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Data</title>
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="healthData.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COVID-19 Health Data by Country</h1>
+
+        <p>Type in a country name and click submit to see the breakdown of COVID-19 cases.</p>
+
+        <div class="inputContainer">
+            <input type="text" id="country" placeholder="Search by country name">
+            <button id="btnSubmit" onclick="getData()">Search</button>
+        </div>
+
+        <div  class="chartContainer">
+            <div id="countryGraph"></div>       
+        </div>
+    </div>
+
+    <script>
+        let countryName, numCases, numDeaths, numRecovered, numActive;
+
+        async function getAPIResponse(country) {
+            const url = "https://disease.sh/v3/covid-19/countries/" + country;
+
+            try {
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+
+                const json = await response.json();
+                console.log(json);
+                return json;
+
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        async function getData() {
+            const countryInput = document.getElementById("country").value || "USA";
+            let data = await getAPIResponse(countryInput);
+            
+            countryName = data.country;
+            numCases = data.cases;
+            numDeaths = data.deaths;
+            numRecovered = data.recovered;
+            numActive = data.active;
+
+            plotGraph();
+        }
+
+        function plotGraph() {
+            var data = [{
+                values: [numRecovered, numActive, numDeaths],
+                labels: ['Recovered', 'Active', 'Deaths'],
+                type: 'pie'
+            }];
+
+            var layout = {
+                title: {
+                    text: countryName + " COVID-19 Cases Breakdown"
+                },
+                height: 400,
+                width: 500
+            };
+
+            Plotly.newPlot('countryGraph', data, layout);
+        }
+
+        window.onload = function() {
+            getData();
+        };
+    </script>    
+</body>
+</html>

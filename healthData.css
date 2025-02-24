@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #152532;
+}
+
+.container {
+    border: #384d65 7px solid;
+    width: 50%; 
+    max-width: 1200px; 
+    min-width: 600px;
+    background-color: #9db4ce; 
+    padding: 30px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; 
+}
+
+h1, p {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.inputContainer, .chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#country {
+    width: 200px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    border: none;
+    border-top: #384d65 5px solid;
+    border-left: #384d65 5px solid;
+    border-top-left-radius: 8px; 
+}
+
+#btnSubmit {
+    width: 100px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    border: none;
+    border-top: #384d65 5px solid;
+    border-right: #384d65 5px solid;
+    border-top-right-radius: 8px; 
+    background-color: #b1becc;
+}
+
+#countryGraph {
+    border: #384d65 5px solid;
+    width: 500px;
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    overflow: hidden;
+}
