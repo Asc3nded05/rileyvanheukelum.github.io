@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="loadDefaultCharacter()">
+    <header>
+        <h1 id="siteTitle">Super Hero and Villian Database</h1>
+        <p id="description">Search for DC and Marvel superheroes and supervillains to learn more about them!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" title="home" id="home">Home</a></li>
+            <li><a href="instructions.html" title="instructions" id="Instructions">Instructions</a></li>
+            <li><a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="CORS Anywhere"
+                    id="cors">Cors Anywhere</a></li>
+            <li><a href="https://superheroapi.com/index.html" target="_blank" title="superHeroAPI" id="api">SuperHero
+                    API</a></li>
+        </ul>
+    </nav>
+
+    <section id="instructionsSection">
+        <p id="instructions">
+            This is a website made using the Superhero API for searching up information on a variety of superheros and
+            supervillains. <br> <br>To connect to the API click the link in the yellow navigation bar labeled "CORS
+            ANYWHERE" and click the button labeled "Request temporary access to the demo server". <br> <br> After doing
+            so navigate back to this website and click the "HOME" button to return to the main page and get searching!
+            <br> <br> Use the search bar on the left to search for any superhero or villian and click on one of
+            the results that will appear below the search bar to display their information. <br> <br> To learn more 
+            about the Superhero API, click the link in the yellow navigation bar labeled "SUPERHERO API" to visit the
+            website.
+        </p>
+    </section>
+
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>

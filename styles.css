@@ -1,0 +1,199 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #F2F5DE;
+    margin: 0px;
+    padding: 0px;
+    background-color: #06A77D;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #052F5F;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+#siteTitle {
+    font-size: 40px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+#description {
+    font-size: 15px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+nav {
+    margin: 0;
+    background-color: #F6AE2D;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 7px;
+    height: 20px;
+    line-height: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+}
+
+a, a:link, a:active, a:visited {
+    color: #F2F5DE;
+    padding: 5px 7px 10px 7px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #052F5F;
+}
+
+.container {
+    display: flex;
+    flex: 1; 
+}
+
+aside {
+    background-color: #005377;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    border-right: #F6AE2D 10px solid;
+}
+
+#search {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #052F5F;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#btnSubmit {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #F2F5DE;
+    background-color: #F6AE2D;
+    border: none;
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#searchResultsList {
+    padding-left: 0%;
+}
+
+#searchResultItem {
+    background-color: #0074a5;
+    list-style: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+section {
+    flex: 1; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+hr {
+    border: 0;
+    height: 5px;
+    background-color: #F6AE2D;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    clear:both;
+    display:block;
+    width: 100%;        
+}
+
+
+#characterInfo {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#name {
+    font-size: 40px;
+    width: 100%; 
+    margin-bottom: 20px; 
+    margin-top: 5px;
+}
+
+#heroImage {
+    min-width: 200px; 
+    margin-right: 10px; 
+    height: auto; 
+    border: #F6AE2D 5px solid;
+}
+
+ul {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+
+#textContent {
+    flex: 1 1 50%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column; 
+    margin-left: 20px;
+}
+
+.sectionTitle {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#biography, #powerstats, #appearance, #work, #connections {
+    margin-top: 0px;
+}
+
+#instructionSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#instructions {
+    text-align: justify;
+    font-size: 25px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border: #F6AE2D 5px solid;
+    border-radius: 5px;
+}
