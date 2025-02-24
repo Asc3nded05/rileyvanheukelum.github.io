@@ -149,7 +149,7 @@ function displayCharacter(index) {
             <hr>
             <p id="work">
                 <ul>
-                    <li>Occupation: ${character.work["occupation"]}</li>
+                    <li>Occupation: <ul><li>${character.work["occupation"].split(", ").join("</li><li>")}</li></ul></li>
                     <li>Base: <ul><li>${character.work["base"].split(", ").join("</li><li>")}</li></ul></li>
                 </ul>
             </p>
