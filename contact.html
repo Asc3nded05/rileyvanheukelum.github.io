@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley Van Heukelum</title>
+    <link rel="stylesheet" href="portfolioStyles.css">
+</head>
+
+<body>
+    <header class="topBanner" id="topBannerContactPage">
+        <div id="logoTitleContainer">
+            <img src="Resources/Logo.png" alt="Logo" id="logo" height=75px, width=auto>
+            <h2 id="titleName">Contact</h2>
+        </div>
+
+        <nav id="headerNav">
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="aboutMe.html" id="aboutMe" style="white-space: nowrap;">About Me</a></li>
+                <li><a href="projects.html" id="projects">Projects</a></li>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="contactContent">
+        <div id="contactFormWrapper">
+            <div id="contactFormContainer">
+                <h2 id="contactFormTitle">Contact Me:</h2>
+                <hr class="contactLine">
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <br>
+                    <button type="submit" id="submitButton">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav id="footerNav">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/rileyvanheukelum/" target="_blank" id="linkedIn">LinkedIn</a>
+                </li>
+                <li><a href="https://github.com/Asc3nded05" target="_blank" id="gitHub">GitHub</a></li>
+                <li><a href="mailto:rileyvanheukelum@gmail.com" id="email">Email</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="portfolioJS.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadDefaultCharacter()">
+    <header>
+        <h1 id="siteTitle">Super Hero and Villian Database</h1>
+        <p id="description">Search for DC and Marvel superheroes and supervillains to learn more about them!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="superheroWebsite.html" title="home" id="home">Home</a></li>
+            <li><a href="instructions.html" title="instructions" id="Instructions">Instructions</a></li>
+            <li><a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="CORS Anywhere" id="cors">Cors Anywhere</a></li>
+            <li><a href="https://superheroapi.com/index.html" target="_blank" title="superHeroAPI" id="api">SuperHero API</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <aside>
+            <input type="text" id="search" placeholder="Search for a superhero">
+            <button id="btnSubmit" onclick="getData()">Search</button>
+            <p id="searchResults"></p>
+        </aside>
+
+        <section>
+            <div id="characterInfo"></div>
+        </section>
+    </div>
+
+    <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

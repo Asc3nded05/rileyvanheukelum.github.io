@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superhero Database</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Riley Van Heukelum</title>
+    <link rel="stylesheet" href="portfolioStyles.css">
 </head>
-<body onload="loadDefaultCharacter()">
-    <header>
-        <h1 id="siteTitle">Super Hero and Villian Database</h1>
-        <p id="description">Search for DC and Marvel superheroes and supervillains to learn more about them!</p>
+
+<body>
+    <header class="topBanner" id="topBannerMainPage">
+        <div id="logoTitleContainer">
+            <img src="Resources/Logo.png" alt="Logo" id="logo" height=75px, width=auto>
+            <h2 id="titleName">Riley <span style="white-space: nowrap;">Van Heukelum</span></h2>
+        </div>
+
+        <nav id="headerNav">
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="aboutMe.html" id="aboutMe" style="white-space: nowrap;">About Me</a></li>
+                <li><a href="projects.html" id="projects">Projects</a></li>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" title="home" id="home">Home</a></li>
-            <li><a href="instructions.html" title="instructions" id="Instructions">Instructions</a></li>
-            <li><a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="CORS Anywhere" id="cors">Cors Anywhere</a></li>
-            <li><a href="https://superheroapi.com/index.html" target="_blank" title="superHeroAPI" id="api">SuperHero API</a></li>
-        </ul>
-    </nav>
+    <div id="mainContent">
+        <div id="introContainer">
+            <aside id="intro">
+                <img src="Resources/SmallerBackground.jpg" id="smallerPortrait" alt="Riley Van Heukelum">
 
-    <div class="container">
-        <aside>
-            <input type="text" id="search" placeholder="Search for a superhero">
-            <button id="btnSubmit" onclick="getData()">Search</button>
-            <p id="searchResults"></p>
-        </aside>
-
-        <section>
-            <div id="characterInfo"></div>
-        </section>
+                <hr class="introLine">
+                <p id="introText">Hello! My name is <br> <br> <span class="riley">Riley <span
+                            style="white-space: nowrap;">Van Heukelum</span></span> <br> <br> I am a web
+                    designer, software engineer, and graphic designer with a passion for computers, art, and philosophy.
+                </p>
+                <button id="introButton" onclick="location.href='projects.html'">Go to Project Gallery</button>
+                <hr class="introLine">
+            </aside>
+        </div>
     </div>
 
-    <script src="app.js" charset="utf-8"></script>
+    <footer>
+        <nav id="footerNav">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/rileyvanheukelum/" target="_blank" id="linkedIn">LinkedIn</a>
+                </li>
+                <li><a href="https://github.com/Asc3nded05" target="_blank" id="gitHub">GitHub</a></li>
+                <li><a href="mailto:rileyvanheukelum@gmail.com" id="email">Email</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="portfolioJS.js" charset="utf-8"></script>
 </body>
+
 </html>

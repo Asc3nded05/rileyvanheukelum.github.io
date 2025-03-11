@@ -1,0 +1,1170 @@
+* {
+    /* Ensures there is no unwanted default margin or padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Sets the scrolling to smooth for all pages on the website */
+    scroll-behavior: smooth;
+}
+
+html, body {
+    /* Ensures the body and html elements take up the full height of the page */
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+}
+
+body {
+    /* Sets the default font to Bookman Old Style */
+    font-family: "Bookman Old Style"; 
+    /* Sets the default font color */
+    color: #FFE0D0;
+    /* Sets the default background color */
+    background-color: #FFE0D0;
+    /* Ensures there is no unwanted default margin or padding */
+    margin: 0;
+    padding: 0;
+    /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+.topBanner {
+    /* Sets the background color for the top banner of the webpages */
+    background-color: #2A2B2A;
+    /* Makes the banner stretch all the way across the screen */
+    width: 100%;
+    /* Sets the height of the banner*/
+    height: 100px;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Aligns the logo to the right and nav bar to the right edges of the screen */
+    justify-content: space-between;
+    /* Aligns the items vertically to the center of the banner */
+    align-items: center;
+    /* Removes any default margin */
+    margin: 0;
+    /* Sets the top/bottom and left/right padding */
+    padding: 20px 30px;
+    /* Includes padding and border elements in the objects width and height */
+    box-sizing: border-box;
+    /* Sets depth positioning to control the order layers render in */
+    z-index: 100;
+    position: fixed; /* Keep header fixed at the top */
+    top: 0;
+}
+
+#topBannerMainPage {
+    /* Positions the banner relative to its normal position */
+    position: relative;
+}
+
+#topBannerProjectPage {
+    /* Keeps the banner fixed to the top of the page when scrolling */
+    position: fixed;
+}
+
+#logoTitleContainer {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+}
+
+#logo {
+    /* Adds space between the logo and the left edge of the webpage */
+    padding-left: 20px;
+    /* Removes spacing to the right of the logo */
+    padding-right: 0px;
+    margin-right: 0px;
+    /* Centers the logo vertically */
+    align-self: center;
+}
+
+#titleName {
+    /* Sets the font size for the page title */
+    font-size: 45px;
+    /* Sets the color for the page title */
+    color: #FFE0D0;
+    /* italicised the font of the title */
+    font-style: italic;
+    /* Adds space between the title and the logo */
+    padding-left: 20px;
+    /* Adjusts the vertical positioning of the title */
+    padding-top: 10px;
+    /* Removes any unwanted default margins */
+    margin: 0px;
+}
+
+#headerNav, #footerNav {
+    /* Aligns the navs to the right side of the screen */
+    align-self: flex-end;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Aligns the navs to the right side of the screen */
+    justify-content: flex-end;
+    /* Sets the height of the nav bars */
+    line-height: 26.4px;
+}
+
+#headerNav ul, #footerNav ul {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Removes any unwanted default margins */
+    margin: 0;
+    /* Sets the padding around the nav bars */
+    padding: 7px;
+    /* Sets the height of the nav bars */
+    height: 20px;
+    line-height: 20px;
+}
+
+#headerNav ul li, #footerNav ul li {
+    /* Aligns the nav items horizontally instead of vertically */
+    display: inline-block;
+}
+
+#home, #home:link, #home:active, #home:visited,
+#aboutMe, #aboutMe:link, #aboutMe:active, #aboutMe:visited,
+#projects, #projects:link, #projects:active, #projects:visited,
+#contact, #contact:link, #contact:active, #contact:visited {
+    /* Sets the normal color for the nav links */
+    color: #FFE0D0;
+    /* Sets padding between the nav links */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* Sets the font size for the nav links */
+    font-size: 25px;
+    /* Removes the bullets from the list items */
+    text-decoration: none;
+}
+
+#home:hover, #aboutMe:hover, #projects:hover, #contact:hover {
+    /* Sets the color for when hovering over the nav links */
+    color: #839788;
+}
+
+
+/* Home Page Content */
+
+#mainContent {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Sets the height of the section */
+    height: calc(100vh - 130px);
+    /* Sets the background image for the page */
+    background-image: url("Resources/BackgroundTest21.jpg");
+    /* Ensures the background image covers the whole container */
+    background-size: cover;
+    /* Positions the background image so that its properly aligned with the rest of the page */
+    background-position: top right;
+    /* Removes any unwanted default padding or margins */
+    padding: 0px;
+    margin: 0px;
+}
+
+#introContainer {
+    /* Positions the container relative to its normal position */
+    position: relative;
+    /* Sets the width of the container */
+    width: 32%;
+    /* Prevents the container from shrinking */
+    flex-shrink: 0;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Sets the z-index for the container */
+    z-index: 100;
+    /* Removes any unwanted default padding or margins */
+    padding: 0px;
+    margin: 0px;
+}
+
+#intro {
+    /* Sets the width of the intro section */
+    width: 100%; 
+    /* Sets the background color for the intro section */
+    background-color: #8b9a8b;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Sets the flex direction to column */
+    flex-direction: column;
+    /* Prevents the intro section from shrinking */
+    flex-shrink: 0;
+    /* Sets the top padding for the intro section */
+    padding-top: 30px;
+    /* Sets the left padding for the intro section */
+    padding-left: 30px;
+    /* Sets the right padding for the intro section */
+    padding-right: 30px;
+}
+
+.introLine {
+    /* Removes the border */
+    border: 0;
+    /* Sets the height of the line */
+    height: 5px;
+    /* Sets the background color for the line */
+    background-color: #FFE0D0;
+    /* Sets the top margin for the line */
+    margin-top: 10px;
+    /* Sets the bottom margin for the line */
+    margin-bottom: 10px;
+    /* Clears both sides of the line */
+    clear: both;
+    /* Sets the display type to block */
+    display: block;
+    /* Sets the width of the line */
+    width: 100%;     
+}
+
+#introText {
+    /* Sets the color for the intro text */
+    color: #FFE0D0;
+    /* Sets the font size for the intro text */
+    font-size: 25px;
+    /* Sets the width of the intro text */
+    width: 100%;
+    /* Sets the text alignment to justify */
+    text-align: justify;
+    /* Sets the top padding for the intro text */
+    padding-top: 15px;
+    /* Sets the bottom padding for the intro text */
+    padding-bottom: 15px;
+    /* Sets the left padding for the intro text */
+    padding-left: 10px;
+    /* Sets the right padding for the intro text */
+    padding-right: 10px;
+}
+
+#introButton, .projectButton {
+    /* Sets the font family for the button */
+    font-family: "Bookman Old Style";
+    /* Sets the background color for the button */
+    background-color: #4D6A6D;
+    /* Sets the color for the button text */
+    color: #FFE0D0;
+    /* Sets the font size for the button text */
+    font-size: 20px;
+    /* Sets the padding for the button */
+    padding: 10px 20px;
+    /* Removes the border */
+    border: none;
+    /* Sets the border radius for the button */
+    border-radius: 5px;
+    /* Sets the cursor to pointer */
+    cursor: pointer;
+    /* Sets the top margin for the button */
+    margin-top: 10px; 
+    /* Sets the bottom margin for the button */
+    margin-bottom: 15px;
+    /* Sets the width of the button */
+    width: 70%;
+    /* Aligns the button to the center */
+    align-self: center;
+}
+
+#introButton:hover, .projectButton:hover{
+    /* Sets the background color for the button when hovering */
+    background-color: #4C416F;
+}
+
+.riley {
+    /* Sets the font size for Riley's name */
+    font-size: 40px;
+    /* Sets the color for Riley's name */
+    color: #4C416F;
+    /* Italicizes Riley's name */
+    font-style: italic;
+}
+
+#smallerPortrait {
+    /* Hides the smaller portrait by default */
+    display: none;
+}
+
+#homeImageLayers {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+    /* Sets the width of the container */
+    width: 100%;
+    /* Sets the height of the container */
+    height: 100vh;
+    /* Positions the container relative to its normal position */
+    position: relative;
+    /* Removes any unwanted default padding or margins */
+    padding: 0;
+    margin: 0;
+    /* Ensures content does not extend beyond the container */
+    overflow: hidden;
+}
+
+
+/* Project Page Content */
+
+#projectContent {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Sets the top padding for the content */
+    padding-top: 100px;
+    /* Sets the background image for the page */
+    background-image: url("Resources/ProjectBackgroundTest12.jpg");
+    /* Ensures the background image covers the whole container */
+    background-size: 100%;
+    /* Positions the background image so that its properly aligned with the rest of the page */
+    background-position: top;
+}
+
+#projectGallery {
+    /* Sets the width of the gallery */
+    width: 70%;
+    /* Sets the background color for the gallery */
+    background-color: #8b9a8b;
+    /* Sets the left padding for the gallery */
+    padding-left: 50px;
+    /* Sets the right padding for the gallery */
+    padding-right: 50px;
+    /* Sets the left border for the gallery */
+    border-left: #293241 solid 20px;
+    /* Sets the right border for the gallery */
+    border-right: #293241 solid 20px;
+}
+
+.projectCategory {
+    /* Sets the color for the project category */
+    color: #4C416F; 
+    /* Italicizes the project category */
+    font-style: italic;
+    /* Sets the font size for the project category */
+    font-size: 35px;
+    /* Sets the top padding for the project category */
+    padding-top: 20px;
+    /* Sets the bottom padding for the project category */
+    padding-bottom: 10px;
+}
+
+.projectTitle {
+    /* Sets the color for the project title */
+    color: #FFE0D0;
+    /* Sets the font size for the project title */
+    font-size: 25px;  
+    /* Sets the font weight for the project title */
+    font-weight: bold;
+    /* Sets the top padding for the project title */
+    padding-top: 40px;
+    /* Sets the bottom padding for the project title */
+    padding-bottom: 10px;
+}
+
+.videoContainer {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+    /* Sets the width of the container */
+    width: 100%; 
+    /* Sets the top and bottom margin for the container */
+    margin: 20px 0;
+}
+
+.projectVideo {
+    /* Sets the width of the video */
+    width: 90%;
+    /* Sets the height of the video */
+    height: auto;
+}
+
+.photoContainer {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+    /* Sets the width of the container */
+    width: 100%; 
+    /* Sets the top and bottom margin for the container */
+    margin: 20px 0;
+}
+
+.castleImage {
+    /* Sets the width of the image */
+    width: 90%;
+    /* Sets the height of the image */
+    height: auto;
+}
+
+.warningPoster {
+    /* Sets the width of the poster */
+    width: 50%;
+    /* Sets the height of the poster */
+    height: auto;
+}
+
+.projectDescription {
+    /* Sets the text alignment to justify */
+    text-align: justify;
+}
+
+.purple {
+    /* Sets the color for elements with the purple class */
+    color: #4C416F;
+}
+
+.projectLine {
+    /* Removes the border */
+    border: 0;
+    /* Sets the height of the line */
+    height: 5px;
+    /* Sets the background color for the line */
+    background-color: #FFE0D0;
+    /* Clears both sides of the line */
+    clear: both;
+    /* Sets the display type to block */
+    display: block;
+    /* Sets the width of the line */
+    width: 100%;     
+}
+
+.projectButtonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Lightbox For Fullscreening Images */
+
+/* Lightbox container */
+.lightbox {
+    /* Hidden by default */
+    display: none;
+    /* Positions the container fixed */
+    position: fixed;
+    /* Sets the z-index for the container */
+    z-index: 1000;
+    /* Positions the container to the left */
+    left: 0;
+    /* Positions the container to the top */
+    top: 0;
+    /* Sets the width of the container */
+    width: 100%;
+    /* Sets the height of the container */
+    height: 100%;
+    /* Hide overflow to prevent scrolling */
+    overflow: hidden;
+    /* Sets the background color for the container */
+    background-color: rgba(0,0,0,0.9);
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+    /* Stack zoom controls below the image */
+    flex-direction: column;
+}
+
+/* Lightbox content container */
+.lightbox-content-container {
+    /* Positions the container relative to its normal position */
+    position: relative;
+    /* Sets the width of the container */
+    width: 90%;
+    /* Sets the height of the container */
+    height: 90%;
+    /* Enable scrolling */
+    overflow: auto;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Aligns items to the top */
+    align-items: flex-start;
+}
+
+/* Lightbox content (image) */
+.lightbox-content {
+    /* Sets the maximum width of the content */
+    max-width: 100%;
+    /* Sets the maximum height of the content */
+    max-height: 100%;
+    /* Smooth zoom transition */
+    transition: transform 0.3s ease;
+    /* Ensure scaling from top left */
+    transform-origin: top left;
+    /* Sets the z-index for the content */
+    z-index: 99;
+}
+
+/* Zoom controls */
+.zoom-controls {
+    /* Sets the top margin for the controls */
+    margin-top: 20px;
+}
+
+.zoom-controls button {
+    /* Sets the background color for the button */
+    background-color: #4D6A6D;
+    /* Sets the color for the button text */
+    color: #FFE0D0;
+    /* Sets the font size for the button text */
+    font-size: 20px;
+    /* Sets the padding for the button */
+    padding: 10px;
+    /* Removes the border */
+    border: none;
+    /* Sets the border radius for the button */
+    border-radius: 5px;
+    /* Sets the cursor to pointer */
+    cursor: pointer;
+    /* Sets the left and right margin for the button */
+    margin: 0 10px;
+}
+
+.zoom-controls button:hover {
+    /* Sets the background color for the button when hovering */
+    background-color: #4C416F;
+}
+
+/* Close button */
+.close {
+    /* Positions the button absolute */
+    position: absolute;
+    /* Positions the button to the top */
+    top: 15px;
+    /* Positions the button to the right */
+    right: 35px;
+    /* Sets the color for the button */
+    color: #8b9a8b;
+    /* Sets the font size for the button */
+    font-size: 40px;
+    /* Sets the font weight for the button */
+    font-weight: bold;
+    /* Sets the transition for the button */
+    transition: 0.3s;
+    /* Sets the z-index for the button */
+    z-index: 100;
+}
+
+.close:hover,
+.close:focus {
+    /* Sets the color for the button when hovering or focusing */
+    color: #4C416F;
+    /* Removes the text decoration */
+    text-decoration: none;
+    /* Sets the cursor to pointer */
+    cursor: pointer;
+}
+
+
+/* About Me Page Content */
+
+#aboutMeContent {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Stack image and text sections vertically */
+    flex-direction: column;
+    /* Allow it to grow to fill the remaining space */
+    flex-grow: 1;
+    /* Sets the height of the section */
+    height: calc(100vh - 130px);
+    /* Removes any unwanted default padding or margins */
+    padding: 0px;
+    margin: 0px;
+}
+
+#aboutMeImageContainer {
+    /* Sets the width of the container */
+    width: 100%;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the image horizontally */
+    justify-content: center;
+    /* Centers the image vertically */
+    align-items: center;
+}
+
+#aboutMeImageContainer img {
+    /* Sets the maximum width of the image */
+    max-width: 100%;
+    /* Sets the width of the image */
+    width: auto;
+    /* Sets the height of the image */
+    height: auto;
+    /* Sets the z-index for the image */
+    z-index: 99;
+}
+
+.aboutMeLine {
+    /* Removes the border */
+    border: 0;
+    /* Sets the height of the line */
+    height: 3px;
+    /* Sets the background color for the line */
+    background-color: #FFE0D0;
+    /* Clears both sides of the line */
+    clear: both;
+    /* Sets the display type to block */
+    display: block;
+    /* Sets the width of the line */
+    width: 100%;
+    /* Sets the top margin for the line */
+    margin-top: 10px;
+    /* Sets the bottom margin for the line */
+    margin-bottom: 10px;
+}
+
+#aboutMeTextContainer {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Evenly distribute paragraphs */
+    justify-content: space-around;
+    /* Align paragraphs vertically in the center */
+    align-items: center;
+    /* Sets the background color for the container */
+    background-color: #8b9a8b;
+    /* Sets the padding for the container */
+    padding: 20px;
+    padding-top: 6px;
+    padding-bottom: 25px;
+    /* Ensure the container takes the remaining height */
+    flex: 1;
+    /* Sets the z-index for the container */
+    z-index: 100;
+    /* Allow wrapping of text sections */
+    flex-wrap: wrap;
+}
+
+.aboutMeText {
+    /* Sets the background color for the text sections */
+    background-color: #293241;
+    /* Sets the color for the text */
+    color: #FFE0D0;
+    /* Sets the padding for the text sections */
+    padding: 20px;
+    /* Ensure paragraphs take equal width */
+    flex: 1;
+    /* Sets the text alignment to justify */
+    text-align: justify;
+    /* Sets the margin for the text sections */
+    margin: 10px;
+    /* Sets the height of the text sections */
+    height: 100%;
+    /* Sets the border radius for the text sections */
+    border-radius: 5px;
+    /* Sets the font size for the text */
+    font-size: 16px;
+}
+
+
+/* Contact Page Content */
+
+#contactContent {
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+    /* Sets the height of the section */
+    height: calc(100vh - 130px);
+    /* Removes any unwanted default padding or margins */
+    padding: 0px;
+    margin: 0px;
+    /* Adjusts for fixed header */
+    margin-top: 100px;
+    /* Sets the background color for the section */
+    background-color: #FFE0D0;
+}
+
+#contactFormWrapper {
+    /* Sets the width of the wrapper */
+    width: 60%;
+    /* Sets the background color for the wrapper */
+    background-color: #8b9a8b;
+    /* Removes any unwanted default padding or margins */
+    padding: 0px;
+    margin: 0px;
+    /* Sets the left padding for the wrapper */
+    padding-left: 50px;
+    /* Sets the right padding for the wrapper */
+    padding-right: 50px;
+    /* Sets the left border for the wrapper */
+    border-left: #293241 solid 20px;
+    /* Sets the right border for the wrapper */
+    border-right: #293241 solid 20px;
+    /* Sets the height of the wrapper */
+    height: 100%;
+    /* Sets the display type to flex for more control over their positioning */
+    display: flex;
+    /* Centers the content horizontally */
+    justify-content: center;
+    /* Centers the content vertically */
+    align-items: center;
+}
+
+#contactFormContainer {
+    /* Sets the background color for the container */
+    background-color: #293241;
+    /* Sets the padding for the container */
+    padding: 20px;
+    /* Sets the border radius for the container */
+    border-radius: 5px;
+    /* Sets the width of the container */
+    width: 100%;
+    /* Sets the maximum width of the container */
+    max-width: 800px;
+}
+
+.contactLine {
+    /* Removes the border */
+    border: 0;
+    /* Sets the height of the line */
+    height: 5px;
+    /* Sets the background color for the line */
+    background-color: #FFE0D0;
+    /* Clears both sides of the line */
+    clear: both;
+    /* Sets the display type to block */
+    display: block;
+    /* Sets the width of the line */
+    width: 100%;
+    /* Sets the top margin for the line */
+    margin-top: 10px;
+    /* Sets the bottom margin for the line */
+    margin-bottom: 20px;
+}
+
+#contactForm label {
+    /* Sets the color for the labels */
+    color: #FFE0D0;
+    /* Sets the font size for the labels */
+    font-size: 18px;
+    /* Sets the display type to block */
+    display: block;
+    /* Sets the bottom margin for the labels */
+    margin-bottom: 5px;
+}
+
+#contactForm input, #contactForm textarea {
+    /* Sets the width of the inputs and textareas */
+    width: 100%;
+    /* Sets the padding for the inputs and textareas */
+    padding: 10px;
+    /* Sets the bottom margin for the inputs and textareas */
+    margin-bottom: 10px;
+    /* Sets the border for the inputs and textareas */
+    border: 1px solid #4D6A6D;
+    /* Sets the border radius for the inputs and textareas */
+    border-radius: 5px;
+    /* Sets the background color for the inputs and textareas */
+    background-color: #2A2B2A;
+    /* Sets the color for the text in the inputs and textareas */
+    color: #FFE0D0;
+}
+
+#contactForm textarea {
+    /* Allow only vertical resizing */
+    resize: vertical;
+    /* Sets a maximum height for vertical resizing */
+    max-height: 225px;
+}
+
+#contactForm button {
+    /* Sets the background color for the button */
+    background-color: #4D6A6D;
+    /* Sets the color for the button text */
+    color: #FFE0D0;
+    /* Sets the font size for the button text */
+    font-size: 18px;
+    /* Sets the padding for the button */
+    padding: 10px 20px;
+    /* Removes the border */
+    border: none;
+    /* Sets the border radius for the button */
+    border-radius: 5px;
+    /* Sets the cursor to pointer */
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    /* Sets the background color for the button when hovering */
+    background-color: #4C416F;
+}
+
+
+/* Footer */
+
+footer {
+    /* Sets the background color for the footer */
+    background-color: #2A2B2A;
+    /* Removes any unwanted default margin */
+    margin: 0px;
+    /* Sets the height of the footer */
+    height: 30px;
+    /* Ensures footer takes full width */
+    width: 100%;
+    /* Sets the position of the footer */
+    position: relative;
+    /* Sets the z-index for the footer */
+    z-index: 100;
+    /* Prevent footer from shrinking */
+    flex-shrink: 0;
+}
+
+#linkedIn, #linkedIn:link, #linkedIn:active, #linkedIn:visited,
+#gitHub, #gitHub:link, #gitHub:active, #gitHub:visited,
+#email, #email:link, #email:active, #email:visited {
+    /* Sets the color for the links */
+    color: #FFE0D0;
+    /* Sets the left and right padding for the links */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* Sets the font size for the links */
+    font-size: 15px;
+    /* Removes the text decoration */
+    text-decoration: none;
+}
+
+#linkedIn:hover, #gitHub:hover, #email:hover {
+    /* Sets the color for the links when hovering */
+    color: #839788;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1500px) {
+    #introText {
+        /* Reduce font size for intro text */
+        font-size: 20px;
+    }
+
+    .riley {
+        /* Reduce font size for Riley's name */
+        font-size: 35px;
+    }
+
+    #introButton, .projectButton {
+        /* Reduce font size for button text */
+        font-size: 15px;
+        /* Adjust padding for button */
+        padding: 5px 15px;
+        /* Adjust top margin for button */
+        margin-top: 10px; 
+        /* Adjust bottom margin for button */
+        margin-bottom: 15px;
+    }
+
+    #aboutMeImageContainer img {
+        /* Ensure image takes full width */
+        max-width: 100%;
+        /* Set width to auto */
+        width: auto;
+        /* Set height to auto */
+        height: auto;
+        /* Set z-index for image */
+        z-index: 99;
+    }
+}
+
+@media (max-width: 1200px) {
+    #titleName {
+        /* Hide title name */
+        display: none;
+    }
+
+    #introText {
+        /* Further reduce font size for intro text */
+        font-size: 15px;
+    }
+
+    .riley {
+        /* Further reduce font size for Riley's name */
+        font-size: 30px;
+    }
+
+    #introButton, .projectButton {
+        /* Further reduce font size for button text */
+        font-size: 10px;
+    }
+
+    #contactFormWrapper {
+        /* Adjust width of contact form wrapper */
+        width: 70%;
+    }
+
+    #projectGallery {
+        /* Adjust width of project gallery */
+        width: 85%;
+    }
+}
+
+@media (max-width: 920px) {
+    #mainContent {
+        /* Stack elements vertically */
+        flex-direction: column;
+        /* Center elements horizontally */
+        align-items: center;
+        /* Adjust height of the section */
+        height: auto;
+    }
+
+    #projectContent {
+        /* Remove background image for the page */
+        background-image: none;
+    }
+
+    .topBanner {
+        /* Center the header content */
+        justify-content: center;
+    }
+
+    #logo {
+        /* Hide logo */
+        display: none;
+    }
+
+    #introContainer {
+        /* Make intro container full width */
+        width: 100%;
+    }
+
+    #intro {
+        /* Stack elements vertically */
+        flex-direction: column;
+        /* Center elements horizontally */
+        align-items: center;
+    }
+
+    #introText {
+        /* Further reduce font size for intro text */
+        font-size: 20px;
+    }
+
+    #introButton, .projectButton {
+        /* Further reduce font size for button text */
+        font-size: 18px;
+    }
+
+    .riley {
+        /* Further reduce font size for Riley's name */
+        font-size: 30px;
+    }
+
+    #smallerPortrait {
+        /* Display smaller portrait */
+        display: flex;
+        /* Adjust width of smaller portrait */
+        width: 95%;
+        /* Set height to auto */
+        height: auto;
+    }
+
+    #footer {
+        /* Set footer position to relative */
+        position: relative;
+    }
+
+    #contactFormWrapper {
+        /* Adjust width of contact form wrapper */
+        width: 80%;
+    }
+
+    #projectGallery {
+        /* Adjust width of project gallery */
+        width: 100%;
+    }
+}
+
+@media (max-width: 790px) {
+    #aboutMeTextContainer {
+        /* Stack text sections vertically */
+        flex-direction: column;
+    }
+
+    .projectVideo {
+        /* Ensure video takes full width */
+        width: 100%;
+    }
+
+    #projectGallery {
+        /* Adjust left and right padding for project gallery */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {    
+    #introText {
+        /* Further reduce font size for intro text */
+        font-size: 18px;
+    }
+
+    #introButton, .projectButton {
+        /* Further reduce font size for button text */
+        font-size: 16px;
+    }
+
+    .riley {
+        /* Further reduce font size for Riley's name */
+        font-size: 25px;
+    }
+
+    #footerNav {
+        /* Center the footer nav content */
+        justify-content: center;
+    }
+
+    #contactFormWrapper {
+        /* Adjust width of contact form wrapper */
+        width: 100%;
+    }
+}
+
+@media (max-width: 544px) {
+    #mainContent {
+        /* Adjust height of the section */
+        height: auto;
+    }
+
+    #home, #home:link, #home:active, #home:visited,
+    #aboutMe, #aboutMe:link, #aboutMe:active, #aboutMe:visited,
+    #projects, #projects:link, #projects:active, #projects:visited,
+    #contact, #contact:link, #contact:active, #contact:visited {
+        /* Reduce font size for nav links */
+        font-size: 20px;
+    }
+
+    .topBanner {
+        /* Reduce height of the header */
+        height: 50px;
+    }
+
+    #introContainer {
+        /* Make intro container full width */
+        width: 100%;
+    }
+
+    #intro {
+        /* Adjust padding for intro section */
+        padding: 20px;
+    }
+
+    #introText {
+        /* Further reduce font size for intro text */
+        font-size: 16px;
+    }
+
+    #introButton, .projectButton {
+        /* Further reduce font size for button text */
+        font-size: 14px;
+    }
+
+    .riley {
+        /* Further reduce font size for Riley's name */
+        font-size: 20px;
+    }
+
+    #linkedIn, #linkedIn:link, #linkedIn:active, #linkedIn:visited,
+    #gitHub, #gitHub:link, #gitHub:active, #gitHub:visited,
+    #email, #email:link, #email:active, #email:visited {
+        /* Reduce font size for footer links */
+        font-size: 10px;
+    }
+
+    #contactContent {
+        /* Adjust top margin for contact content */
+        margin-top: 50px;
+        /* Adjust height of contact content */
+        height: 150%;
+    }
+
+    #contactForm button {
+        /* Reduce font size for button text */
+        font-size: 13px;
+    }
+
+    #contactForm label {
+        /* Reduce font size for labels */
+        font-size: 13px;
+    }
+
+    #contactFormTitle {
+        /* Reduce font size for form title */
+        font-size: 19px;
+    }
+
+    #aboutMeImageContainer img {
+        /* Ensure image takes full width */
+        width: 100%;
+    }
+
+    .aboutMeText {
+        /* Reduce font size for about me text */
+        font-size: 13px;
+    }
+
+    #projectContent {
+        /* Adjust top padding for project content */
+        padding-top: 50px;
+    }
+
+    .projectCategory {
+        /* Reduce font size for project category */
+        font-size: 25px;
+    }
+
+    .projectTitle {
+        /* Reduce font size for project title */
+        font-size: 20px;
+        /* Adjust top padding for project title */
+        padding-top: 20px;
+        /* Adjust bottom padding for project title */
+        padding-bottom: 0px;
+    }
+
+    .projectDescription {
+        /* Reduce font size for project description */
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 430px) {
+    #home, #home:link, #home:active, #home:visited,
+    #aboutMe, #aboutMe:link, #aboutMe:active, #aboutMe:visited,
+    #projects, #projects:link, #projects:active, #projects:visited,
+    #contact, #contact:link, #contact:active, #contact:visited {
+        /* Reduce padding between nav links */
+        padding-left: 7px;
+        padding-right: 7px;
+        /* Reduce font size for nav links */
+        font-size: 15px;
+    } 
+
+    #contactFormWrapper {
+        /* Adjust padding for contact form wrapper */
+        padding: 5px;
+        /* Remove left and right borders for contact form wrapper */
+        border-left: none;
+        border-right: none;
+    }
+
+    #contactFormContainer {
+        /* Adjust padding for contact form container */
+        padding: 10px;
+    }
+}
+
